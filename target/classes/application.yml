@@ -1,0 +1,37 @@
+# Veritabanı Ayarları
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:file:./dataBase
+    username: root
+    password: 1234
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    generate-ddl: true
+    show-sql: true
+
+  http:
+    encoding:
+      force: true
+      charset: UTF-8
+      enabled: true
+
+# E-posta Ayarları
+  mail:
+    host: smtp.elasticemail.com
+    port: 2525
+    username: deneme@deneme.com
+    password: 8B5406EC13688FAB8607BBBBB86058C68A36
+    protocol: smtp
+    smtp:
+      auth: true
+      starttls:
+        enable: false
+      ssl:
+        enable: false
+      socketFactory:
+        port: 465
+        class: javax.net.ssl.SSLSocketFactory
